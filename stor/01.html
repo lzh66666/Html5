@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id='btn' value='向本地添加数据' />
+		<script>
+			document.getElementById('btn').onclick=function(){
+				alert('数据添加成功');
+				localStorage.setItem('shopname','土豪手机');
+				localStorage.setItem('age','18');
+				localStorage.setItem('sex','爷们');
+				localStorage.setItem('price','19999');
+				
+				//sessionStorage是临时存储
+				//删除本地存储区域的内容
+//				localStorage.removeItem('sex');
+				//把本地存储的localStorafe的数据清空
+//				localStorage.clear();
+				localStore.length();
+			}
+		</script>
+	</body>
+</html>
