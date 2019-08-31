@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			canvas{
+				background: #272822;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id='canvas' width='900' height='500'></canvas>
+		<script>
+			//获得画板
+			var canvas=document.getElementById('canvas');
+			//获得绘画环境
+			var cv=canvas.getContext('2d');
+			//创建图片资源
+//			var imgs=document.getElementById('imgs');
+			var newimg=new Image();
+			newimg.src='../../../作业/京东/21.jpg';
+			
+			newimg.onload=function(){
+				var guize=cv.createPattern(newimg,'repeat');
+				//创建一个矩形区域
+				cv.rect(10,10,700,450);
+				cv.fillStyle=guize;
+				cv.fill();	
+			}
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			header{
+				width: 1000px;
+				height: 130px;
+				background: red;
+				margin: 0 auto;
+			}
+			nav{
+				width: 1000px;
+				height: 40px;
+				margin: 0 auto;
+				background: orange;
+			}
+			nav a{
+				text-decoration: none;
+				line-height: 40px;
+				font-size: 20px;
+				color: #333;
+				padding: 0 15px;
+			}
+			#main{
+				width: 1000px;
+				height: 400px;
+				margin: 0 auto;
+				background: white;
+			}
+			#main aside{
+				width: 220px;
+				height: 400px;
+				background: greenyellow;
+				float: left;
+			}
+			/*#main .flash{
+				float: right;
+				width: 770px;
+				height: 400px;
+				background: cyan;
+			}*/
+			#main article{
+				float: right;
+				width: 770px;
+				height: 400px;
+				background: cyan;
+			}
+			footer{
+				width: 1000px;
+				height: 150px;
+				margin: 5px auto;
+				background: mediumspringgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部标签-->
+		<header>
+			头部标签
+		</header>
+		<!--导航条-->
+		<nav>
+			<a href="">首页</a>
+			<a href="">新闻</a>
+			<a href="">地图</a>
+			<a href="">视屏</a>
+			<a href="">图片</a>
+			<a href="">音乐</a>
+		</nav>
+		<!--中间大区域-->
+		<div id='main'>
+			<!--侧边栏-->
+			<aside>
+				请选者地区：
+				<br /><br />
+				<select name="select" id="select">
+					<optgroup label='山西'>
+						<option value="">太原</option>
+						<option value="">忻州</option>
+						<option value="">朔州</option>
+						<option value="">大同</option>
+					</optgroup>
+					<optgroup label='山东'>
+						<option value="">石家庄</option>
+						<option value="">邯郸</option>
+						<option value="">保定</option>
+					</optgroup>
+				</select>
+				<!--进度条-->
+				<progress max='100' value='33'></progress>
+				<meter min='0' max='100' low='30' high='80' value='50'></meter>
+			</aside>
+			<!--轮播图-->
+			<!--<div class="flash"></div>-->
+			<!--文章区域-->
+			<article>
+				<h1>各种水果的优点</h1>
+				<!--文章发表时间-->
+				发表时间：<time pubdate="2019-06-10">2019-06-10</time>
+				<!--指定时间非当前时间 当前时间-->
+				<!--<time datetime="2019-06-09">2019-06-09</time>-->
+				
+				<section>
+					<h2>苹果</h2>
+					<!--各种强调mark,ins,del-->
+					<p><mark>苹果如果熟了就好吃，没熟就不好吃</mark>苹果如果熟了就好吃，没熟就不好吃苹果如果熟了就好吃，没熟就不好     吃苹果如果熟了就好吃，<ins>没熟就不好吃苹果如果熟了就好吃</ins>，没熟就不好吃苹果如果熟了就好吃，没熟就不好吃苹果如果熟了就好吃，没熟就不好吃苹果如果熟了就好吃，<del>没熟就不好吃</del>苹果如果熟了就好吃，没熟就不好吃</p>
+				</section>
+				<section>
+					<h2>葡萄</h2>
+					<p>吃葡萄不吐葡萄皮，不吃葡萄倒吐葡萄皮吃葡萄不吐葡萄皮，不吃葡萄倒吐葡萄皮吃葡萄不吐葡萄皮，不吃葡萄倒吐葡萄皮吃葡萄不吐葡萄皮，不吃葡萄倒吐葡萄皮吃葡萄不吐葡萄皮，不吃葡萄倒吐葡萄皮吃葡萄不吐葡萄皮，不吃葡萄倒吐葡萄皮吃葡萄不吐葡萄皮，不吃葡萄倒吐葡萄皮吃葡萄不吐葡萄皮，不吃葡萄倒吐葡萄皮</p>
+				</section>
+			</article>
+		</div>
+		<!--底部标签-->
+		<footer>
+			底部footer标签
+			<!--地址标签-->
+			<address>山西省太原市尖草坪区上兰村中北大学</address>
+			<code>alert('你好');</code>
+		</footer>
+		
+	</body>
+</html>

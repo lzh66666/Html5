@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			canvas{
+				background: #272822;
+			}
+		</style>
+	</head>
+	<body>
+		<br />
+		<canvas id='canvas' width='900' height='500'></canvas>
+		<script>
+			//获得画板
+			var canvas=document.getElementById('canvas');
+			//获得绘画环境
+			var cv=canvas.getContext('2d');
+			//创建图片资源
+			var newimg=new Image();
+			newimg.src='../../../作业/中北大学/img1/26.png';
+			
+			newimg.onload=function(){
+				//将图片画入画板
+				cv.drawImage(newimg,10,10);
+				//获得指定区域内的像素点的信息
+				var alldata=cv.getImageData(20,20,200,100);
+				//1R2G3B4像素
+				//alert(alldata.data);
+				//将图像信息写入画板
+				cv.putImageData(alldata,550,350);
+			}
+			
+			
+		</script>
+	</body>
+</html>

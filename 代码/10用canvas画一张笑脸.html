@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			canvas{
+				background: #272822;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id='canvas' width='900' height='600'></canvas>
+		<script>
+			
+			//获得画板
+			var canvas=document.getElementById('canvas');
+			//获得绘画环境
+			var cv=canvas.getContext('2d');
+			//指定填充颜色
+			cv.fillStyle="#272822";
+			
+			
+			//绘制一个矩形当做背景
+			cv.fillRect(0,0,900,600);
+			cv.fill();
+			
+			
+			//画眼睛
+			cv.arc(200,100,50,0*Math.PI/180,360*Math.PI/180);
+			cv.fillStyle='#E6DB74';
+			cv.fill();
+			
+			//画眼睛
+			cv.arc(600,100,50,0*Math.PI/180,360*Math.PI/180);
+			cv.fillStyle='#E6DB74';
+			cv.fill();
+			
+			//画鼻子
+			cv.fillStyle='#A6E22E';
+			cv.fillRect(375,130,50,200);
+			
+			//画嘴
+			cv.beginPath();
+			cv.arc(400,400,100,0*Math.PI/180,180*Math.PI/180);
+			cv.fillStyle='#F92672';
+			cv.fill();
+		</script>
+	</body>
+</html>

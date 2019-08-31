@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#canvas{
+				background: #272822;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id='canvas' width='900' height='500'>
+			
+		</canvas>
+		<script>
+			//获得画板
+			var canvas=document.getElementById('canvas');
+			//获得回话环境
+			var cv=canvas.getContext('2d');
+			
+			//开启路径
+			cv.beginPath();
+			//移动笔触到开始位置
+			cv.moveTo(200,50);
+			//指定划到那里去
+			cv.lineTo(200,450);
+			cv.lineTo(500,450);
+			cv.stroke();
+			
+//			cv.lineTo(200,50);
+//			cv.stroke();
+			
+			//结束路径，将路径闭合
+			cv.closePath();
+			cv.stroke();
+			
+			
+			//填充线条，与填充颜色相对应
+			
+//			//绘画之前定义好拐角类型
+//			cv.lineJoin='round';
+//			//定义好颜色
+//			cv.strokeStyle='deepskyblue';
+//			//定义好粗细
+//			cv.lineWidth='10';
+//			//把线条画出来n
+//			cv.stroke();
+			
+			//填充颜色
+			cv.fillStyle='yellow';
+			//指定填充路径
+			cv.fill();
+			
+		</script>
+	</body>
+</html>

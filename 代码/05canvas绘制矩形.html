@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#canvas{
+				background: #272822;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id='canvas' width="800" height='500'></canvas>
+		<script>
+			//获得画板
+			var canvas=document.getElementById("canvas");
+			//获得绘画环境
+			var cv=canvas.getContext('2d');
+			
+			//背景颜色扣下来
+			cv.fillStyle='black';
+			cv.fillRect(0,0,800,500);
+			
+			//指定填充颜色
+			cv.fillStyle='greenyellow';
+			//绘制一个填充矩形
+			cv.fillRect(200,100,260,199);
+			//清除部分
+			cv.clearRect(300,150,100,50);
+			
+			
+			//指定线条的粗细
+			cv.lineWidth='10';
+			//指定线条颜色
+			cv.strokeStyle='red';
+			//绘制一个空心矩形
+			cv.strokeRect(30,20,50,60);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="">
+			<input type="text" list='city'/>
+			<!--输入提示-->
+			<datalist id='city'>
+				<option value="北京雾霾">北京雾霾</option>
+				<option value="北京天气">北京天气</option>
+				<option value="北京天气预报">北京天气预报</option>
+				<option value="上海明珠">上海明珠</option>
+				<option value="山东泰山">山东泰山</option>
+			</datalist>
+			<!--自动获取焦点-->
+			<input type="text"  autofocus="autofocus"/>
+			<br /><br />
+			<!--将两个form表单联系起来-->
+			邮箱：<input type="email" form='biaodan'/>
+		</form>
+		<br /><br />
+		<!--将两个form表单联系起来-->
+		<form action="" id='biaodan'>
+			用户名：<input type="text" />
+			密码：<input type="password" />
+			<input type="submit"/>
+		</form>
+		<br /><br /><br /><br />
+		
+		<form action="">
+			<!--上传多个文件-->
+			<input type="file" multiple='multiple' />
+			<br /><br />
+			<!--输出提示-->
+			<input type="text" placeholder="请输入内容" />
+			<br /><br />
+			<!--输入限制-->
+			<input type="text" placeholder="表单内容不能为空"  required/>
+			<input type="text" pattern='\d\d\d\d' />
+			<br /><br />
+			<input type="submit" />
+		</form>
+		
+	</body>
+</html>

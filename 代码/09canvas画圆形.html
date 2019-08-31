@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			canvas{
+				background: #272822;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id='canvas' width='900' height='500'></canvas>
+		<script>
+			//获得画板
+			var canvas=document.getElementById('canvas');
+			//获得绘画环境
+			var cv=canvas.getContext('2d');
+		
+			cv.arc(400,300,100,0*Math.PI/180,60*Math.PI/180);
+			
+			//设置笔触的粗细
+			cv.lineWidth=1;
+			
+			//设置笔触的颜色
+			cv.fillStyle='blueviolet';
+			cv.fill();
+			
+			//画一个空心形状
+//			cv.strokeStyle='yellow';
+//			cv.stroke();
+		</script>
+	</body>
+</html>

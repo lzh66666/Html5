@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<!--autoplay是自动播放
+		loop是循环播放
+		controls是控制台-->
+		<!--<video src="html5初识 特点介绍.mp4" controls="controls" loop="loop" autoplay="autoplay"width="600"></video>-->
+		<input type="button" id='start' value="开始播放" />
+		<input type="button" id='pause' value="暂停"/>
+		<input type="range" id='val' min='0' max='10' step='1' value='10'/>
+		<input type="button" id='forward'  value='快进'/>
+		<br /><br />
+		<video src="html5初识 特点介绍.mp4" poster="poster.jpg" loop="loop" width="600" id='v'></video>
+		<script>
+			var v=document.getElementById('v');
+			var start=document.getElementById('start');
+			var pause=document.getElementById('pause');
+			var val=document.getElementById('val');
+			var forward=document.getElementById('forward');
+			
+			//开始按钮
+			start.onclick=function(){
+				//视屏开始播放
+				v.play();
+			}
+//			v.onplay=function(){
+//				alert('开始播放');
+//			}
+			//暂停
+			pause.onclick=function(){
+				//暂停播放
+				v.pause();
+			}
+			val.onchange=function(){
+				v.volume=this.value/10;
+			}
+			forward.onclick=function(){
+				//获得当前播放到的位置
+				var now_time=v.currentTime;
+				//计算新位置
+				var new_time=now_time+3;
+				//将新的位置赋值回去
+				v.currentTime=new_time;
+			}
+		</script>
+	</body>
+</html>
+
+
+
